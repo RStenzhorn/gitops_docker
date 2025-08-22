@@ -3,7 +3,7 @@ services:
     image: "checkmk/check-mk-raw:2.4.0-latest"
     container_name: "monitoring"
     environment:
-      - CMK_PASSWORD=mypassword
+      - CMK_PASSWORD=$CMK_PASSWORD
       - TZ=Europe/Berlin
     volumes:
       - monitoring:/omd/sites
