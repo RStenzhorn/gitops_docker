@@ -1,7 +1,7 @@
 services:
   checkmk:
     image: "checkmk/check-mk-raw:2.4.0-latest"
-    container_name: "monitoring"
+    container_name: "checkmk"
     environment:
       - CMK_PASSWORD=$CMK_PASSWORD
       - OMD_SITE=monitoring
