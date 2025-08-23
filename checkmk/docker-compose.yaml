@@ -13,6 +13,16 @@ services:
       - "5000:5000"
       - "8000:8000"
     restart: always
+    networks:
+      - docker-network
 
 volumes:
   monitoring:
+
+networks:
+  docker-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.60.0/24
+          gateway: 192.168.60.1
